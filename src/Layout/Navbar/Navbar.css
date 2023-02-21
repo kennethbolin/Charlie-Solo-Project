@@ -1,0 +1,17 @@
+.Navbar{
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: bisque;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+a:hover{
+    color:deepskyblue;
+}
+
+a:link{
+    text-decoration: none;
+}
