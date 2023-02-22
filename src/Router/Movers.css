@@ -1,0 +1,9 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+}
+
+.BMTable {
+    align-self: center;
+}

@@ -1,4 +1,6 @@
 //imports
+import BiggestMoversTable from "../Components/Tables/BM-Table"
+import './Movers.css'
 
 //define helper functions and variables here
 
@@ -13,8 +15,11 @@ function Movers(props) {
     //component logic
   
     return (
-      <div>
-        <h2>movers page</h2>
+      <div className="main">
+        <h2>Largest movers in past 24 hours</h2>
+        <div className='BMTable'> 
+          <BiggestMoversTable/>
+        </div> 
       </div>
     )
   }
