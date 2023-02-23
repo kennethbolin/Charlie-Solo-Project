@@ -1,18 +1,19 @@
 import React from 'react';
-import "./V-Table.css";
+import "./TrendingTable.css";
 import {useState, useEffect} from 'react';
 
 
 
-const VolumeTable = function() {
+function TrendingTable () {
+     
   const [data, setData] = useState([])
-
+  
   useEffect(() =>{
     fetchData()
   }, [])
 
   async function fetchData () {
-    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=volume_desc&per_page=25&page=1&sparkline=false')
+    fetch('https://api.coingecko.com/api/v3/search/trending')
       .then(response => response.json())
       .then(json => (
         setData(json)  //console.log(json)
@@ -27,19 +28,17 @@ const VolumeTable = function() {
         <thead>
           <tr>
             <th>Coin</th>
-            <th>Symbol</th>
-            <th>Price</th>
-            <th>Volume</th>
+            <th>Price in BTC</th>
+            <th>Market Cap Rank</th>
           </tr>
         </thead>
         {
           data.map(coin => (
             <tbody>
               <tr key={coin.name}>
-                <td>{<img className="image"src={coin.image}></img>}{coin.name}</td>
-                <td>{coin.symbol}</td>
-                <td>{coin.current_price}</td>
-                <td>{coin.total_volume}</td>
+                <td>{coin.item.name}</td>
+                <td>{coin.item.price_btc}</td>
+                <td>{coin.item.market_cap_rank}</td>
               </tr>
           </tbody>
           ))
@@ -48,7 +47,8 @@ const VolumeTable = function() {
       </table>
     </div>
   )
-    }
+
+}
   ;
 
-export default VolumeTable
+export default TrendingTable

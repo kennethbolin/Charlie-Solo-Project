@@ -15,10 +15,12 @@ function Header(props) {
   return (
     <div>
       <div className="header">
-        <h1 className="title">This is the Header</h1>
-        <div className="logo">
+      <div className="logo">
           <img src={logo} alt="logo"/>
-        </div>
+      </div>
+      <h2>
+        <marquee className="title">Welcome to CoinTrends!   Where we help you stay ahead of the curve</marquee>
+      </h2>
       </div>
     </div>
   );

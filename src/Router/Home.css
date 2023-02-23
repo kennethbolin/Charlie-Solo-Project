@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.MCTable {
+    align-self: center;
+}
+
+background{
+    color: bisque;
+}

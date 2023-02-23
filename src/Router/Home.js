@@ -1,4 +1,5 @@
 import MarketCapTable from '../Components/Tables/MC-Table'
+import "./Home.css"
 //imports
 
 //define helper functions and variables here
@@ -14,10 +15,11 @@ function Home(props) {
     //component logic
   
     return (
-      <div>
-        <h2>
-            Home page
-        </h2>
+      <div className='main'>
+        <h2>Top Coins by Market Cap</h2>
+        <table className='MCTable'> 
+          <MarketCapTable/>
+        </table> 
       </div>
     )
   }
